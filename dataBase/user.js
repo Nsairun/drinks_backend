@@ -19,6 +19,7 @@ const User = sequelize.define(
     phone: DataTypes.STRING,
     apiKey: DataTypes.STRING,
     password: DataTypes.STRING,
+    isAdmin: DataTypes.BOOLEAN,
   },
   {
     timestamps: true,

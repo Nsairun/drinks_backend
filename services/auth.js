@@ -21,7 +21,7 @@ const authMiddleware = async (req, res, next) => {
 };
 
 const authApiKey = async (req, res, next) => {
-  const API_KEY =req.header("x-api-key");
+  const API_KEY = req.header("x-api-key");
   if(!API_KEY) {
     return res.sendStatus(401)
   }

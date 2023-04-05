@@ -16,6 +16,7 @@ module.exports = router;
 
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
+  // const user = await User.findOne({ where: { emailAddress: username } && {isAdmin: 1} });
   const user = await User.findOne({ where: { emailAddress: username } });
   if (!user) {
     return res.sendStatus(401);

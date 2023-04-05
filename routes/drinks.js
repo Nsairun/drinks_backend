@@ -137,7 +137,7 @@ const router = express.Router();
 const drinkController = require('../Controllers/drinksController');
 const { authMiddleware, authApiKey } = require("../services/auth");
 
-router.get("/",authApiKey,drinkController.getAllDrinks);
+router.get("/",authApiKey, drinkController.getAllDrinks);
 
 router.post("/",authMiddleware,drinkController.createDrink);
 
